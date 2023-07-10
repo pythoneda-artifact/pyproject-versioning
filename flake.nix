@@ -75,32 +75,32 @@
               inherit description homepage license maintainers;
             };
           };
-        pythoneda-artifact-pyproject-versioning-0_0_1a1-for =
+        pythoneda-artifact-pyproject-versioning-0_0_1a2-for =
           { pythoneda-base, pythoneda-artifact-shared-nix-flakes, python }:
           pythoneda-artifact-pyproject-versioning-for {
-            version = "0.0.1a1";
+            version = "0.0.1a2";
             inherit pythoneda-base pythoneda-artifact-shared-nix-flakes python;
           };
       in rec {
         packages = rec {
-          pythoneda-artifact-pyproject-versioning-0_0_1a1-python38 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-for {
+          pythoneda-artifact-pyproject-versioning-0_0_1a2-python38 =
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-for {
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python38;
               pythoneda-artifact-shared-nix-flakes =
                 pythoneda-artifact-shared-nix-flakes.packages.${system}.pythoneda-artifact-shared-nix-flakes-latest-python38;
               python = pkgs.python38;
             };
-          pythoneda-artifact-pyproject-versioning-0_0_1a1-python39 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-for {
+          pythoneda-artifact-pyproject-versioning-0_0_1a2-python39 =
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-for {
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python39;
               pythoneda-artifact-shared-nix-flakes =
                 pythoneda-artifact-shared-nix-flakes.packages.${system}.pythoneda-artifact-shared-nix-flakes-latest-python39;
               python = pkgs.python39;
             };
-          pythoneda-artifact-pyproject-versioning-0_0_1a1-python310 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-for {
+          pythoneda-artifact-pyproject-versioning-0_0_1a2-python310 =
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-for {
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python310;
               pythoneda-artifact-shared-nix-flakes =
@@ -108,50 +108,50 @@
               python = pkgs.python310;
             };
           pythoneda-artifact-pyproject-versioning-latest-python38 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-python38;
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-python38;
           pythoneda-artifact-pyproject-versioning-latest-python39 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-python39;
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-python39;
           pythoneda-artifact-pyproject-versioning-latest-python310 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-python310;
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-python310;
           pythoneda-artifact-pyproject-versioning-latest =
             pythoneda-artifact-pyproject-versioning-latest-python310;
           default = pythoneda-artifact-pyproject-versioning-latest;
         };
         defaultPackage = packages.default;
         devShells = rec {
-          pythoneda-artifact-pyproject-versioning-0_0_1a1-python38 =
+          pythoneda-artifact-pyproject-versioning-0_0_1a2-python38 =
             shared.devShell-for {
               package =
-                packages.pythoneda-artifact-pyproject-versioning-0_0_1a1-python38;
+                packages.pythoneda-artifact-pyproject-versioning-0_0_1a2-python38;
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python38;
               python = pkgs.python38;
               inherit pkgs nixpkgsRelease;
             };
-          pythoneda-artifact-pyproject-versioning-0_0_1a1-python39 =
+          pythoneda-artifact-pyproject-versioning-0_0_1a2-python39 =
             shared.devShell-for {
               package =
-                packages.pythoneda-artifact-pyproject-versioning-0_0_1a1-python39;
+                packages.pythoneda-artifact-pyproject-versioning-0_0_1a2-python39;
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python39;
               python = pkgs.python39;
               inherit pkgs nixpkgsRelease;
             };
-          pythoneda-artifact-pyproject-versioning-0_0_1a1-python310 =
+          pythoneda-artifact-pyproject-versioning-0_0_1a2-python310 =
             shared.devShell-for {
               package =
-                packages.pythoneda-artifact-pyproject-versioning-0_0_1a1-python310;
+                packages.pythoneda-artifact-pyproject-versioning-0_0_1a2-python310;
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python310;
               python = pkgs.python310;
               inherit pkgs nixpkgsRelease;
             };
           pythoneda-artifact-pyproject-versioning-latest-python38 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-python38;
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-python38;
           pythoneda-artifact-pyproject-versioning-latest-python39 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-python39;
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-python39;
           pythoneda-artifact-pyproject-versioning-latest-python310 =
-            pythoneda-artifact-pyproject-versioning-0_0_1a1-python310;
+            pythoneda-artifact-pyproject-versioning-0_0_1a2-python310;
           pythoneda-artifact-pyproject-versioning-latest =
             pythoneda-artifact-pyproject-versioning-latest-python310;
           default = pythoneda-artifact-pyproject-versioning-latest;
